@@ -1,5 +1,6 @@
-# mikutter-mode package
-
-A short description of your package.
-
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+mikutter-mode package
+====
+なにこれ
+----
+[toshia 氏作成の Emacs mikutter-mode](https://github.com/toshia/mikutter-mode)の Atom 版です。
+リポジトリ名かぶってるのであとで何とかする。
