@@ -1,0 +1,17 @@
+{
+  "name": "mikutter-mode",
+  "version": "0.0.1",
+  "description": "This plugin is development for mikutter plugin.",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "mikutter-mode:toggle"
+  },
+  "repository": "https://github.com/arc680/mikutter-mode",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

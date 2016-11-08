@@ -1,0 +1,78 @@
+'.source.ruby':
+  'command':
+    'prefix': 'command'
+    'body': """
+      command(:${1:slug},
+        name: '$2',
+        condition: lambda{ |opt| ${4:$$(yas/choose-value '("true" "opt.messages.size == 1" "opt.messages.size == 1 && opt.messages.first.repliable?" "opt.messages.size == 1 && opt.widget.selected_text(opt.messages.first)" "opt.messages.all? &:repliable?" "opt.messages.all? { |m| m.retweetable? and not m.retweeted_by_me? }" "opt.messages.all?{ |m| m.favoritable? and not m.favorited_by_me? }"))} },
+        visible: true,
+        role: :${3:$$(yas/choose-value '("timeline" "postbox" "tab" "pane" "window" "profile" "profiletab"))}) do |opt|
+      	$0
+      end
+    """
+  'defevent':
+    'prefix': 'defevent'
+    'body': """
+      defevent :${1:event_name},
+      priority: ${2:$$(yas/choose-value '(":ui_favorited" ":routine_passive" ":ui_passive" ":routine_active" ":ui_response"))},
+      prototype: [$3]
+    """
+  'plugin template':
+    'prefix': 'dp'
+    'body': """
+      Plugin.create :$1 do
+        $0
+      end
+    """
+  'define event filter':
+    'prefix': 'filter'
+    'body': """
+      filter_${1:filter_name} do |$2|
+      	$0
+      	[${2:$(mapconcat 'identity (ruby-arglist-split yas-text) ", ")}]
+      end
+    """
+  'Plugin Call':
+    'prefix': 'call'
+    'body': """
+      Plugin.call(${1:event name}, ${2:args})$0
+    """
+  'define event':
+    'prefix': 'on'
+    'body': """
+      on_${1:event_name} do |$2|
+        $0
+      end
+    """
+  'Plugin create':
+    'prefix': 'create'
+    'body': """
+      Plugin.create :$1 do
+      	$0
+      end
+    """
+  'tab':
+    'prefix': 'tab'
+    'body': """
+      tab(${1:slug}, "$2") do
+      	set_icon$3
+      	$0
+      end
+    """
+  'settings':
+    'prefix': 'settings'
+    'body': """
+      settings "$1" do
+        $0
+      end
+    """
+  'timeline':
+    'prefix': 'timeline'
+    'body': """
+      timeline :${1:slug}$0
+    """
+  'UserConfig':
+    'prefix': 'uc'
+    'body': """
+      UserConfig[:$1]$0
+    """
