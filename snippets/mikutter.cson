@@ -20,7 +20,7 @@
   'plugin template':
     'prefix': 'dp'
     'body': """
-      Plugin.create :$1 do
+      Plugin.create :${1:plugin_name} do
         $0
       end
     """
@@ -47,7 +47,7 @@
   'Plugin create':
     'prefix': 'create'
     'body': """
-      Plugin.create :$1 do
+      Plugin.create :${1:plugin_name} do
       	$0
       end
     """
