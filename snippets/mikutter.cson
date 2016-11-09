@@ -14,8 +14,9 @@
     'prefix': 'defevent'
     'body': """
       defevent :${1:event_name},
-      priority: ${2:$$(yas/choose-value '(":ui_favorited" ":routine_passive" ":ui_passive" ":routine_active" ":ui_response"))},
+      priority: :${2:priority_name},
       prototype: [$3]
+      # priority_name : ui_favorited, routine_passive, ui_passive, routine_active, ui_response
     """
   'plugin template':
     'prefix': 'dp'
