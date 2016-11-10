@@ -1,3 +1,5 @@
-## 0.1.0 - First Release
-* とりあえずスニペットをベタ移植
-  * とりあえずすぎるので一部よろしくない感じ
+### 0.0.2
+* Replaced unusable snippets.
+
+### 0.0.1 - First Release
+* Transplanted snippets from [toshia/mikutter-mode](https://github.com/toshia/mikutter-mode) .

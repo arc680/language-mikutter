@@ -1,6 +1,14 @@
-mikutter-mode package
+language-mikutter package
 ====
-なにこれ
+What is this?
 ----
-[toshia 氏作成の Emacs mikutter-mode](https://github.com/toshia/mikutter-mode)の Atom 版です。
-リポジトリ名かぶってるのであとで何とかする。
+This package is development for mikutter plugin.
+
+Function
+----
+* snippet
+
+ToDo
+----
+* Call mikutter debug mode
+* autocomplete
