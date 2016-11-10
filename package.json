@@ -1,16 +1,14 @@
 {
   "name": "language-mikutter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This package is development for mikutter plugin.",
-  "keywords": [
-  ],
+  "keywords": [],
   "repository": "https://github.com/arc680/language-mikutter",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "configSchema": {
     "mikutter path": {
       "order": 1,
